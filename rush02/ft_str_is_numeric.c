@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpfeiffe <jpfeiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:18:54 by jpfeiffe          #+#    #+#             */
-/*   Updated: 2022/07/08 11:20:32 by jpfeiffe         ###   ########.fr       */
+/*   Created: 2022/07/11 16:57:39 by jpfeiffe          #+#    #+#             */
+/*   Updated: 2022/07/14 14:49:34 by jpfeiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft.h"
-#include <unistd.h>
 
-void	ft_putchar(char c)
+#include <unistd.h>
+#include <stdio.h>
+
+int	ft_str_is_numeric(char *str)
 {
-	write(1, &c, 1);
+	while (*str)
+	{
+		if (!(*str >= '0' && *str <= '9'))
+			return (0);
+		str++;
+	}
+	return (1);
 }

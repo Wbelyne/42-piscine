@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpfeiffe <jpfeiffe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpfeiffe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:18:54 by jpfeiffe          #+#    #+#             */
-/*   Updated: 2022/07/08 11:20:32 by jpfeiffe         ###   ########.fr       */
+/*   Created: 2022/07/08 13:02:53 by jpfeiffe          #+#    #+#             */
+/*   Updated: 2022/07/09 09:59:53 by jpfeiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft.h"
-#include <unistd.h>
 
-void	ft_putchar(char c)
+#include <unistd.h>
+#include <stdio.h>
+
+void	ft_swap(int *a, int *b)
 {
-	write(1, &c, 1);
+	int	swap;
+
+	swap = *a;
+	*a = *b;
+	*b = swap;
 }

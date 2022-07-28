@@ -1,18 +1,24 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpfeiffe <jpfeiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:18:54 by jpfeiffe          #+#    #+#             */
-/*   Updated: 2022/07/08 11:20:32 by jpfeiffe         ###   ########.fr       */
+/*   Created: 2022/07/10 19:15:18 by jpfeiffe          #+#    #+#             */
+/*   Updated: 2022/07/14 12:14:43 by jpfeiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft.h"
-#include <unistd.h>
 
-void	ft_putchar(char c)
+#include <unistd.h>
+#include <stdio.h>
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] > '\0')
+		i++;
+	return (i);
 }

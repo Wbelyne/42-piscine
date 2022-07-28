@@ -1,18 +1,33 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jpfeiffe <jpfeiffe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jpfeiffe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:18:54 by jpfeiffe          #+#    #+#             */
-/*   Updated: 2022/07/08 11:20:32 by jpfeiffe         ###   ########.fr       */
+/*   Created: 2022/07/10 19:13:09 by jpfeiffe          #+#    #+#             */
+/*   Updated: 2022/07/10 19:14:36 by jpfeiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ft.h"
 #include <unistd.h>
+#include <stdio.h> 
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] > '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
 }

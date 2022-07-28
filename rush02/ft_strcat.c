@@ -1,18 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jpfeiffe <jpfeiffe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/06 10:18:54 by jpfeiffe          #+#    #+#             */
-/*   Updated: 2022/07/08 11:20:32 by jpfeiffe         ###   ########.fr       */
+/*   Created: 2022/07/13 18:04:44 by jpfeiffe          #+#    #+#             */
+/*   Updated: 2022/07/17 19:41:29 by jpfeiffe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "ft.h"
-#include <unistd.h>
 
-void	ft_putchar(char c)
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
+
+int	ft_strlen(char *c)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 0;
+	while (c[i] > '\0')
+		i++;
+	return (i);
+}
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int	destlen;
+	int	i;
+
+	i = 0;
+	destlen = ft_strlen(dest);
+	while (src[i] != '\0')
+	{
+		dest[destlen + i] = src[i];
+		i++;
+	}
+	dest[destlen + i] = '\0';
+	return (dest);
 }
